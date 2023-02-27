@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #1b4053;
+  --white: #fdfff5;
+  --shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+/*Back to Top*/
+#btn-back-to-top {
+  position: fixed;
+  background-color: aliceblue;
+  color: var(--main-color);
+  border-radius: 15px;
+  border: none;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+/* Scroll Bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset var(--shadow); 
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+
+/*Navbar*/
+#navbarNavAltMarkup a{
+  color: darkblue;
+}
+
+
+/* Carousal Home*/
+
+.car-img {
+  border-radius: 20px;
+  height: 500px;
+  width: 400px;
+}
+
+.home-text {
+  padding: 100px 0;
+  color: aliceblue;
+  text-align: center;
+}
+
+.main-text {
+  font-size: 64px;
+}
+
+.sub-text {
+  font-size: 50px;
+}
+
+
+.head-title {
+  font-size: 38px;
+  text-align: center; 
+  font-weight: bolder;
+}
+
+/* Products */
+
+/* [1] The container */
+.img-hover-zoom {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+
+/* Zoom */
+.click-zoom input[type=checkbox] {
+  display: none
+}
+
+.click-zoom img {
+  transition: transform 0.25s ease;
+  cursor: zoom-in
+}
+
+.click-zoom input[type=checkbox]:checked~img {
+  transform: scale(2);
+  cursor: zoom-out
+}
+
+
+/* Services */
+
+.boxers {
+  margin: 20px 20px;
+  padding: 20px 15px 10px 15px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.boxers:hover {
+  background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgba(0,0,139,1) 35%, rgba(0,212,255,1) 100%);
+  color: aliceblue;
+  transition: 0.5s ease-in;
+}
+.counter { 
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28px;
+}
+
+.abt-text {
+  font-size: 28px;
+}
+
+/* Contact */
+
+.cnt-box {
+  background-color: white;
+  border-color: 3px solid black;
+  box-shadow: var(--shadow);
+}
+  
+input {
+  width: 100%;
+  border: none;
+  border-bottom:1px solid #ccc;
+  outline: none;
+  padding-bottom: 5px;
+}
+  
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+  
+label {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: block;
+  color: var(--black);
+}
+  
+.cnt-btn {
+  margin-top: 10px;
+  padding: 10px;
+  background: linear-gradient(320deg, rgba(2,0,36,1) 0%, rgba(0,0,139,1) 35%, rgba(0,212,255,1) 100%);
+  border:none;
+  outline:none;
+  color:white;
+  border-radius: 10px;
+}
+
+.map-con {
+  border:0;
+  border-radius: 10px;
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .cnt-box button {
+    margin-left: 50px;
+  }
+  .map-con{
+    width: max-content;
+  }
+  .boxers {
+    margin: 10px 10px;
+    padding: 15px 10px 10px 10px;
+  }
+  .main-text {
+    font-size: 44px;
+  }
+  .sub-text {
+    font-size: 36px;
+  }
+  .abt-text{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cnt-box button {
+    margin-right: 180px;
+  }
+  .map-con {
+    width: max-content;
+  }
+  .boxers {
+    margin: 10px 10px;
+    padding: 20px 15px 10px 15px;
+  }
+}
+
+/* Footer */
+a {
+  text-decoration: none;
+  color: grey;
+}
+a:hover {
+  color: darkblue;
+}
+
+.somer {
+  color: grey;
+}
+
+.somer:hover{
+  color: darkblue;
+}
+
+.designs {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 50%;
+  color: darkblue;
+  font-weight: bolder;
+}
