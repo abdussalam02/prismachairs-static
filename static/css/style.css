@@ -249,3 +249,7 @@ a:hover {
   color: darkblue;
   font-weight: bolder;
 }
+
+.card-title {
+  color: darkblue !important;
+}
